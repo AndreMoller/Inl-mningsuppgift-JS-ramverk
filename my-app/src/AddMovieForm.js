@@ -2,12 +2,19 @@ import React from 'react'
 
 const AddMovieForm = (props) => {
     const [title, setTitle] = React.useState("");
-    const [grade, setGrade] = React.useState("");
+    const [grade, setGrade] = React.useState(1);
 
     const saveBtn = (e) => {
         e.preventDefault();
-        props.saveMovie(title, grade);
-        console.log(title + " " + grade);
+
+        if (title !== "") {
+            props.saveMovie(title, grade);
+            setTitle("");
+            setGrade(1);
+        } else {
+            alert("Titel krävs");
+        }
+
     }
 
     const onTitleChange = (e) => {
@@ -21,18 +28,26 @@ const AddMovieForm = (props) => {
     return (
         <div>
             <form>
-                <label htmlFor="title">
-                </label>
-               
-                <input type = "text" id = "title" onChange = {onTitleChange}>
-                </input>
+                <div id = "formdiv">
+                    <label htmlFor="title">
+                    </label>
 
-                <label htmlFor="grade">
-                </label>
+                    <input type="text" className = "form-control" id="title" placeholder="Titel här..." value={title} onChange={onTitleChange}>
+                    </input>
 
-                <input type = "text" id = "grade" onChange = {onGradeChange}>
-                </input>
-                <button onClick = {saveBtn}>Save Movie</button>
+                    <label htmlFor="grade">
+                    </label>
+
+                    <select className="form-control" id="grade" value={grade} onChange={onGradeChange}>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <button className = "btn btn-primary" id = "saveBtn" onClick={saveBtn}>Save Movie</button>
+                </div>
             </form>
         </div>
     )
