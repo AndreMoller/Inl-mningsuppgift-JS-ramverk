@@ -51,9 +51,22 @@ h4 {
 }
 
 li {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+    grid-template-columns: 5fr, 2fr, 1fr;
+    grid-template-rows: auto;
+    display: grid;
 }
 
-i {}
+#stars{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#title{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#xXx{
+  grid-column-start: 3;
+  grid-column-end: 4;
+}

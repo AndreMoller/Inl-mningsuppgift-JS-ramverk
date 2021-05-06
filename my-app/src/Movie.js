@@ -18,9 +18,9 @@ const Movie = (props) => {
 
     return (
         <li>
-            <p>{props.data.title}</p>
-            {stars}
-            <i className="fas fa-times" onClick = {removeMovie}></i>
+            <p id = "title">{props.data.title}</p>
+            <div id = "stars">{stars}</div>
+            <i id = "xXx" className="fas fa-times" onClick = {removeMovie}></i>
         </li>
     )
 }

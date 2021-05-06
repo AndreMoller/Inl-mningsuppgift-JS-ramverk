@@ -1,6 +1,7 @@
 import React from 'react'
 import AddMovieForm from './AddMovieForm';
 import Movie from './Movie';
+import './App.css';
 
 const MovieApplication = () => {
     const [movies, setMovies] = React.useState([]);
