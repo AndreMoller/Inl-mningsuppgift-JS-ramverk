@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css';
 
 const Movie = (props) => {
     const [stars, setStars] = React.useState();
