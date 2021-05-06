@@ -4,8 +4,10 @@ import Movie from './Movie';
 import './App.css';
 
 const MovieApplication = () => {
+    //all movies
     const [movies, setMovies] = React.useState([]);
 
+    //callback function used to save a new movie
     const saveMovie = (title, grade) => {
         let tempMovie = { "title": title, "grade": grade, "id": Date.now() };
         let tempMovies = JSON.parse(JSON.stringify(movies));
@@ -13,6 +15,7 @@ const MovieApplication = () => {
         setMovies(tempMovies);
     }
 
+    //Callback function used to remove a movie 
     const removeMovie = (id) => {
         movies.forEach((movie, index) => {
             if (movie.id === id) {
@@ -23,6 +26,7 @@ const MovieApplication = () => {
         });
     }
 
+    //
     function alphaSort(a, b) {
         if (a.title.toLowerCase() < b.title.toLowerCase()) {
             return -1;
@@ -41,12 +45,14 @@ const MovieApplication = () => {
         return 0;
     }
 
+    //used to sort the array of movies
     const alfaOrdning = () => {
         let sortedMovies = JSON.parse(JSON.stringify(movies));
         sortedMovies.sort(alphaSort);
         setMovies(sortedMovies);
     }
 
+    //used to sort the array of movies
     const betygOrdning = () => {
         let sortedMovies = JSON.parse(JSON.stringify(movies));
         sortedMovies.sort(gradeSort);

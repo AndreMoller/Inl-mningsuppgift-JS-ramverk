@@ -5,6 +5,7 @@ const AddMovieForm = (props) => {
     const [title, setTitle] = React.useState("");
     const [grade, setGrade] = React.useState(1);
 
+    //Sends data to parent element
     const saveBtn = (e) => {
         e.preventDefault();
 

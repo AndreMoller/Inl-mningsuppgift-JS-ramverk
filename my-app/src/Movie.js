@@ -4,10 +4,12 @@ import './App.css';
 const Movie = (props) => {
     const [stars, setStars] = React.useState();
 
+    //tells parent element to remove this element
     const removeMovie = () => {
         props.deleteFunction(props.id);
     }
 
+    //updates stars
     React.useEffect(() => {
         let star = [];
         for(let i = 0; i < props.data.grade; i++){
