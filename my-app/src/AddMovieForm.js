@@ -36,7 +36,7 @@ const AddMovieForm = (props) => {
                     <input type="text" className = "form-control" id="title" placeholder="Titel här..." value={title} onChange={onTitleChange}>
                     </input>
 
-                    <label htmlFor="grade">
+                    <label htmlFor="grade">Betyg
                     </label>
 
                     <select className="form-control" id="grade" value={grade} onChange={onGradeChange}>

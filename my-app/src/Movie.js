@@ -20,7 +20,7 @@ const Movie = (props) => {
         <li>
             <p id = "title">{props.data.title}</p>
             <div id = "stars">{stars}</div>
-            <i id = "xXx" className="fas fa-times" onClick = {removeMovie}></i>
+            <i id = "cross" className="fas fa-times" onClick = {removeMovie}></i>
         </li>
     )
 }

@@ -29,11 +29,16 @@ h4 {
 }
 
 #movieApp {
+    background-color: rgb(208, 227, 243);
     display: grid;
     max-width: 30%;
     min-width: 400px;
     margin: auto;
-    grid-template-rows: auto, auto, auto, auto, auto;
+    grid-template-rows: auto auto auto auto auto;
+    border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 #alfaBtn {
@@ -51,22 +56,26 @@ h4 {
 }
 
 li {
-    grid-template-columns: 5fr, 2fr, 1fr;
-    grid-template-rows: auto;
-    display: grid;
+  display: grid;
+  margin-top: 5px;
+  grid-template-columns: 70% 25% 5%;
+  background-color: rgb(206, 208, 212);
+  border-radius: 8px;
+  border: 2px solid #8aaceb;
+  padding: 5px;
 }
 
 #stars{
   grid-column-start: 2;
   grid-column-end: 3;
-}
-
-#title{
+  }
+  
+  #title{
   grid-column-start: 1;
   grid-column-end: 2;
-}
-
-#xXx{
+  }
+  
+  #cross{
   grid-column-start: 3;
   grid-column-end: 4;
-}
+  }
